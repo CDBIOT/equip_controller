@@ -11,7 +11,6 @@ function cadastrarUsuario(e){
 
 }
 
-
 const [name, setName] = useState()
 const [password, setPassword] = useState()
 return(
@@ -23,7 +22,7 @@ return(
             <input type="text" id ="name" name="name" placeholder = "Digite seu nome" onChange={(e)=> setName(e.target.value)}/>
         </div>
         <div>
-            <label htmlFor="passwor"></label>
+            <label htmlFor="password"></label>
             <input type="text" id= "password" name="password" placeholder = "Digite sua password" onChange={(e)=> setPassword(e.target.value)}/>
         </div>
         <div>
