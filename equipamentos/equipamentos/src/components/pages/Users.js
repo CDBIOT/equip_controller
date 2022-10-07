@@ -1,13 +1,12 @@
 
 import { useState } from 'react'
 
-function Form(){
+function Users(){
 
 function cadastrarUsuario(e){
  e.preventDefault()
     console.log(`O usuario ${name} usa a senha ${password}`)
     console.log("Cadastrou usuário")
-
 }
 
 const [name, setName] = useState()
@@ -15,7 +14,7 @@ const [password, setPassword] = useState()
 
 return(
 <div>
-    <h1> Meu Cadastro</h1>
+    <h1> Submit New User</h1>
     <form onSubmit={cadastrarUsuario}>
         <div>
             <label htmlFor="name"></label>
@@ -37,4 +36,4 @@ return(
 
 }
 
-export default Form
+export default Users

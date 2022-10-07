@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "equipamentos"
+		},
+		{
+			"path": "equip-controler"
+		},
+		{
+			"path": "server"
+		}
+	],
+	"settings": {}
+}

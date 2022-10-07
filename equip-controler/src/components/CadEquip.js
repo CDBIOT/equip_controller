@@ -1,4 +1,5 @@
 
+import React from 'react'
 import { useState } from 'react'
 
 function CadEquip(){
@@ -43,7 +44,8 @@ return(
             <input type="text" id= "localização" name="localização" placeholder = "Digite a localização" onChange={(e)=> setLocal(e.target.value)}/>
         </div>
         <div>
-            <input type="submit" value="Cadastrar Equipamento"/>
+       
+        <input type="submit" value="Cadastrar"/>
         </div>
         
     </form>
