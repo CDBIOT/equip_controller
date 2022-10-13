@@ -33,15 +33,16 @@ app.get('/users',(req,res)=>{
     });
 });
     
-app.post('/',(req,res)=>{
+app.post('/Cad_Prods',(req,res)=>{
     const{product}=req.body;
     const{marca}=req.body;
     const{qtd}=req.body;
     const{price}=req.body;
-    
+
 let SQL = 
+   //"INSERT INTO products(product, marca, qtd, price) VALUES (borracha,mercury,10,2)";
     "INSERT INTO products(product, marca, qtd, price) VALUES (?,?,?,?)";
-    db.query(SQL,[product, marca, qtd , price],( err, result)=> 
+    db.query(SQL,[ product, marca, qtd , price],( err, result)=> 
    {
     console.log(err);  
     }
@@ -54,7 +55,7 @@ app.post('/users',(req,res)=>{
     const{password}=req.body;
    
 let SQL = 
-    "INSERT INTO users(user, role, password) VALUES (?,?,?)";
+    "INSERT INTO users(name, role, password) VALUES (?,?,?)";
     db.query(SQL,[name,role,password],( err, result)=> 
    {
     console.log(err);  
