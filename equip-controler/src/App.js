@@ -11,7 +11,7 @@ import NewProject from './components/pages/NewProject';
 import CadEquip from './components/CadEquip';
 import Axios from "axios";
 import EquipShow from './components/EquipShow';
-import Equip_list from './components/Equip_list';
+import Equip_list from './Equip_list';
 
 function App() {
   

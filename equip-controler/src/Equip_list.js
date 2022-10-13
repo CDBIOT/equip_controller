@@ -6,11 +6,10 @@ import Axios from "axios";
 function Equip_list(equips) {
   
 
-
 return (
     <>
     {equips.length >0 ? (
-    equips.map((data, index) => (
+    equips.map((equips, index) => (
     <h1 key = {index}>
     {equips.patrimonio}
     {equips.equipamento}

@@ -1,12 +1,11 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
-//import {fetchStates} from '../helpers/ibge';
 import Axios from "axios";
-
-const EquipShow = ()=> {
+import Product_list from '../Product_list';
+const ShowProducts = ()=> {
 
 const [equips, setEquips] = useState([]);
-  
+        
 useEffect(() => {
     Axios.get("http://localhost:3001/")
     .then((response) =>{
@@ -15,17 +14,19 @@ useEffect(() => {
     {
     console.log(equips)
     }
+   
 }, [])
 
+return (  <div>
 
-return (   
-    
+    <Product_list />
+   
         <select id = "products">
         <option value = "" >Selecione o produto...</option>
         {equips.map(equips => {
 
         return (
-                <option value key={equips.id}> 
+                <option value={equips.id} key={equips.id}> 
                 {equips.product}
                 {equips.marca}
                 {equips.qtd}
@@ -33,6 +34,8 @@ return (
                 )  
         })}
         </select>
+        </div>
         )
+        
     }
-export default EquipShow
+export default ShowProducts

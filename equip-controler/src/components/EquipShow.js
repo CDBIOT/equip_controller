@@ -1,8 +1,8 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
-//import {fetchStates} from '../helpers/ibge';
+import Equip_list from '../Equip_list';
 import Axios from "axios";
-import Equip_list from './Equip_list';
+
 const EquipShow = ()=> {
 
 const [equips, setEquips] = useState([]);
