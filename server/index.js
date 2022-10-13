@@ -25,7 +25,7 @@ app.get('/',(req,res)=>{
 
 app.get('/users',(req,res)=>{
     let SQL = 
-   "SELECT * from usuarios";
+   "SELECT * from users";
     db.query(SQL,( err, result)=> 
    {
     if (err) console.log(err);
@@ -41,7 +41,7 @@ app.post('/',(req,res)=>{
     
 let SQL = 
     "INSERT INTO products(product, marca, qtd, price) VALUES (?,?,?,?)";
-    db.query(SQL,[product,marca, qtd , price],( err, result)=> 
+    db.query(SQL,[product, marca, qtd , price],( err, result)=> 
    {
     console.log(err);  
     }
@@ -49,12 +49,13 @@ let SQL =
 })
  
 app.post('/users',(req,res)=>{
-    const{usuario}=req.body;
-    const{ função_user}=req.body;
+    const{name}=req.body;
+    const{ role }=req.body;
+    const{password}=req.body;
    
 let SQL = 
-    "INSERT INTO usuarios(usuario, função_user) VALUES (?,?)";
-    db.query(SQL,[usuario,função_user],( err, result)=> 
+    "INSERT INTO users(user, role, password) VALUES (?,?,?)";
+    db.query(SQL,[name,role,password],( err, result)=> 
    {
     console.log(err);  
     }
@@ -66,7 +67,7 @@ let SQL =
 app.get("/:id", (req,res)=>{
 
     const id = req.params.id;
-     db.query("SELECT * FROM posts WHERE id = ?", id, 
+     db.query("SELECT * FROM products WHERE id = ?", id, 
      (err,result)=>{
         if(err) {
         console.log(err)
@@ -79,7 +80,7 @@ app.get("/:id", (req,res)=>{
 app.post(':id',(req,res)=>{
     
     const id = req.params.id;
-    db.query("UPDATE posts SET likes = likes + 1 WHERE id = ?",id, (err,result)=>{
+    db.query("UPDATE products SET products =  products + 1 WHERE id = ?",id, (err,result)=>{
         if(err) {
        console.log(err)   } 
        console.log(result)
@@ -91,7 +92,7 @@ app.post(':id',(req,res)=>{
 app.delete('/:id',(req,res)=>{
     const id = req.params.id;
     
-    db.query("DELETE FROM posts WHERE id= ?", id, (err,result)=>{
+    db.query("DELETE FROM products WHERE id= ?", id, (err,result)=>{
     if(err) {
     console.log(err)
             } }) })
