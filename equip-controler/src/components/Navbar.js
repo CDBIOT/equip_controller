@@ -1,3 +1,4 @@
+import React from 'react';
 import{Link} from 'react-router-dom'
 import styles from './Navbar.module.css'
 import logo from '../blue/logo.png';
@@ -6,33 +7,31 @@ import logo_toi from '../blue/logo_toi.png';
 function Navbar(){
 
 return(
-    
-<nav class={styles.navbar}>
-   <p>
+
+    <ul className={styles.list}>
+    <li>
+    <p>
     <img src={logo} alt="Logo"/>
     <img src={logo_toi} alt="Logo"/>
     </p>
-    <p><h1> Supermarket </h1></p>
-
-    <ul className={styles.list}>
+    </li>
 
         <li className={styles.item}>
             <Link to="/">Home</Link>
         </li>
         <li className={styles.item}>
-            <Link to= "/vendas"> Vendas</Link>
+            <Link to= "/Contato"> Contato</Link>
         </li>
         <li className={styles.item}>
-            <Link to="/Cad_Prods">Cadastro Produto</Link>
+            <Link to="/CadEquip">Cadastro Equipamentos</Link>
         </li>
         <li className={styles.item}>
-            <Link to="/Product_list">Products</Link>
+            <Link to="/Equip_list">Equipamentos</Link>
         </li>
         <li className={styles.item}>
-            <Link to="/users">Users</Link>
+            <Link to="/EquipShow">EquipShow</Link>
         </li>
     </ul>
-    </nav>
    
 )
 }

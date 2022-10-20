@@ -7,20 +7,22 @@ function Card(props){
     const [products, setProducts] = useState()
 
     useEffect(() => {
-        Axios.get("http://localhost:3001/")
+        Axios.get("http://localhost:3001/vendas")
         .then((response) =>{
         setProducts(response.data);
         });
-    
+        {
+        console.log(products)
+        }
     }, [])
+
 return(
 <div>
-   <h3 >
-    {products.product}
-    {products.marca}
-    {products.qtd}
-    {products.price}
-   </h3>
+    {products.map((p,index)=> (
+        <h3 key={index}> 
+     {p.product}</h3>
+    )
+    )}
 </div>
 )
 }
