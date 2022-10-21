@@ -1,0 +1,14 @@
+.table{
+color: #474747;
+font-size: 15px;
+
+}
+.tr{
+padding-top: 10px;
+
+}
+.td{
+padding-top: 10px;
+align-items:flex-start;
+
+}
