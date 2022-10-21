@@ -32,9 +32,10 @@ function Simulador() {
       </div>
 
       <div className={styles.box_mod}>
+        
 
         <p>Escolha os módulos:</p>
-        
+
         <div className={styles.options}>
             <table className={styles.table}>
             <th colSpan={4}>Table</th>
