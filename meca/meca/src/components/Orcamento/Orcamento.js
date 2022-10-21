@@ -1,14 +1,26 @@
-import React from "react"
-import { CiCircleCheck } from 'react-icons/ci'
-import { FcCollapse, FcExpand} from 'react-icons/fc'
+import React, { useState } from "react"
+
 import { Button } from '../../styles/styles'
 import CheckModulo from "../CheckModulo/CheckModulo"
 import Grid from "../GridSistemas/Grid"
 
 import styles from "./Orca.module.css"
 
-function Orcamento() {
+function Orcamento({value}) {
+
+ const[check, setCheck] = useState([])
+
+ const handleCheck = e =>{
+    const{value , checked}= e.target;
+if (checked){
+setCheck(prev=>[...prev, value]); 
+} else {setCheck(value ='' )}
+console.log(value)
+ }
+
     return(
+
+
 <div>
 <span className={styles.message}>Seu orçamento</span>
      
@@ -20,20 +32,21 @@ function Orcamento() {
         <div className={styles.options}>
             <table className={styles.table}>
             <th colSpan={4}>Table</th>
-            <tr><td><input type='checkbox'/>Oficina</td>
-            <td><input type='checkbox'/>NF-e</td>
-            <td><input type='checkbox'/>WhatsApp</td>
-            <td><input type='checkbox'/>Backup online</td></tr>
             <tr>
-            <td><input type='checkbox'/>Venda</td>
-            <td><input type='checkbox'/>NFS-e</td>
-            <td><input type='checkbox'/>Mercado Livre</td>
-            <td><input type='checkbox'/>Catálogo Online</td></tr>
+            <td><input type='Checkbox'onChange={handleCheck} value = 'Oficina' />Oficina</td>
+            <td><input type='Checkbox'onChange={handleCheck} value='NF-e'/>NF-e</td>
+            <td><input type='Checkbox'onChange={handleCheck} value='WhatsApp'/>WhatsApp</td>
+            <td><input type='Checkbox'onChange={handleCheck} value='Backup'/>Backup online</td></tr>
             <tr>
-            <td><input type='checkbox'/>Financeiro</td>
-            <td><input type='checkbox'/>NFC-e / SAT CF-e</td>
-            <td><input type='checkbox'/>Fotos Online</td>
-            <td><input type='checkbox'/>Estoque Online</td></tr>
+            <td><input type='Checkbox'onChange={handleCheck} value='Venda'/>Venda</td>
+            <td><input type='Checkbox'onChange={handleCheck} value='NFS-e'/>NFS-e</td>
+            <td><input type='Checkbox'onChange={handleCheck} value='Mercado'/>Mercado Livre</td>
+            <td><input type='Checkbox'onChange={handleCheck} value='Catálogo'/>Catálogo Online</td></tr>
+            <tr>
+            <td><input type='Checkbox'onChange={handleCheck} value='Financeiro'/>Financeiro</td>
+            <td><input type='Checkbox'onChange={handleCheck} value='NFC-e'/>NFC-e / SAT CF-e</td>
+            <td><input type='Checkbox'onChange={handleCheck} value='Fotos'/>Fotos Online</td>
+            <td><input type='Checkbox'onChange={handleCheck} value='Estoque'/>Estoque Online</td></tr>
             
             </table>
             

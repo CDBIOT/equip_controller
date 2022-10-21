@@ -16,7 +16,7 @@
   
   }
 .message{
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,13 +51,14 @@
     font-size: 30px;
     font-weight: 800;
     background: linear-gradient(360deg, #B4B4B4 0%, #EAEAEA 100%);
+    padding: 10px;
 }
 .logotipo{
     width: 775px;
     height: 70px;
     border: 1px solid #000;
     background: linear-gradient(360deg, #AD1818 0%, #741415 100%);
-    padding: auto;
+    padding: 0.5em;
 }
 .header p{
 font-size: 20px;

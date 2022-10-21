@@ -5,7 +5,7 @@ import CheckModulo from './components/CheckModulo/CheckModulo';
 import { Button } from './components/CheckModulo/styles';
 import Orcamento from './components/Orcamento/Orcamento';
 import Header from './components/Header/Header';
-import Simulador from './components/Simulador/simulador';
+import Simulador from './components/Simulador/Simulador';
 import Container from "./components/CheckModulo/Container"
 
 function App() {
