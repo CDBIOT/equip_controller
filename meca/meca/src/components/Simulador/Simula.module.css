@@ -1,29 +1,35 @@
 .header {
-    display: flex;
+    display: block;
+  
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-
+    
     width: 100%;
     width: 760px;
-    height: 660px;
+    height: 880px;
    
     color: #474747;
     background-color: #ffffff;
     border: 1px solid #000;
     border-radius: 0 0 30px 30px;
-  
   }
+  .header p{
+  
+    font-size: 20px;
+    font-weight: 300;
+    justify-content: justified;
+    
+    }
   .box_mod{
     margin: 20px;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     width: 100%;
     width: 730px;
-    height: 155px;
+    height: 180px;
    
     color: #4747;
     font-weight: 600;
@@ -50,7 +56,6 @@
 
     }
 .box{
-
     margin: 20px 10px 0 10px;
     display: block;
     flex-direction: column;
@@ -67,6 +72,29 @@
 
     border-radius: 30px;
     }
+    
+.boxtab {
+    margin: 20px 10px 0 10px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    width: 720px;
+    height: 360px;
+
+    color: #474747;
+    background-color: #fff;
+    border: 1px solid #000;
+
+    border-radius: 30px;
+    }
+.boxtab p{
+margin-bottom: 40px;
+padding-bottom: 10px;
+
+}
     
 .message{
     margin-top: 20px;
@@ -137,13 +165,7 @@
     font-weight: 800;
     background: linear-gradient(360deg, #B4B4B4 0%, #EAEAEA 100%);
 }
-.header p{
-  
-font-size: 20px;
-font-weight: 300;
-justify-content: justified;
 
-}
 .table td{
 
  padding-top: 10px;

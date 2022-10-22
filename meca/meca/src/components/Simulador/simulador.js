@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FcCollapse, FcExpand} from 'react-icons/fc'
 import { Button } from '../../styles/styles'
+import Grid from '../GridSistemas/Grid'
 import styles from './Simula.module.css'
 
 function Simulador() {
@@ -22,18 +23,20 @@ function Simulador() {
 <span className={styles.message}>Simule um novo orçamento: </span>
       
 <section className={styles.header}>
+
         <div className={styles.box}>
             <p> Escolha o sistema: </p>
+            <span><input type='Checkbox'onChange={handleCheck} value = 'Oficina' />MECAUTO</span>
+            <span><input type='Checkbox'onChange={handleCheck} value = 'Oficina' />MECAUTO-BOX</span>
         </div>
 
-    
-      <div className={styles.box}> Defina a quantidade de acessos simultâneos: 
-      <div> contador ??</div>
+      <div className={styles.box}> 
+            <p>Defina a quantidade de acessos simultâneos: </p>
+            <span> contador ??</span>
       </div>
 
       <div className={styles.box_mod}>
         
-
         <p>Escolha os módulos:</p>
 
         <div className={styles.options}>
@@ -56,6 +59,12 @@ function Simulador() {
             <td><input type='Checkbox'onChange={handleCheck} value='Estoque'/>Estoque Online</td></tr>
             
             </table>
+        </div>
+        <div  className={styles.boxtab}>
+            <p>texto Valores mecauto / mecauto-box</p>
+            
+        <Grid ></Grid>
+        
         </div>
    
     </div>

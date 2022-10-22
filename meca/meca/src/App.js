@@ -7,6 +7,7 @@ import Orcamento from './components/Orcamento/Orcamento';
 import Header from './components/Header/Header';
 import Simulador from './components/Simulador/Simulador';
 import Container from "./components/CheckModulo/Container"
+import Comparador from './components/Comparador/Comparador';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <CheckModulo />
         <Orcamento />
         <Simulador />
+        <Comparador />
       
     </div>
   );
