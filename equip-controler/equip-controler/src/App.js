@@ -6,8 +6,8 @@ import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import Contato from './components/pages/Contato';
 import CadEquip from './components/pages/CadEquip';
-import EquipList from './components/EquipList';
-import EquipShow from './components/EquipShow';
+import EquipList from './components/pages/EquipList';
+import EquipShow from './components/pages/EquipShow';
 
 function App() {
 

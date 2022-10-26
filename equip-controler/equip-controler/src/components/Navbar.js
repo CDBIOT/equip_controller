@@ -26,7 +26,7 @@ return(
             <Link to="/CadEquip">Cadastro Equipamentos</Link>
         </li>
         <li className={styles.item}>
-            <Link to="/Equip_list">Equipamentos</Link>
+            <Link to="/EquipList">Equipamentos</Link>
         </li>
         <li className={styles.item}>
             <Link to="/EquipShow">EquipShow</Link>
