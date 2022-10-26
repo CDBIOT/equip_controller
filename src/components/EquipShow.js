@@ -13,7 +13,7 @@ useEffect(() => {
     .then((response) =>{
     setEquips(response.data);
     });
-}, [])
+}, []) 
 
 function handleCreate(e){
     e.preventDefault()

@@ -8,7 +8,7 @@ function Equip_list(equips) {
 
 return (
     <>
-    {equips.length >0 ? (
+    {equips.length >0 ? ( 
     equips.map((equips, index) => (
     <h1 key = {index}>
     {equips.patrimonio}

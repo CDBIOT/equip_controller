@@ -16,7 +16,7 @@ return(
     </p>
     </li>
 
-        <li className={styles.item}>
+        <li className={styles.item}> 
             <Link to="/">Home</Link>
         </li>
         <li className={styles.item}>

@@ -12,7 +12,7 @@ function Card(props){
         .then((response) =>{
         setEquipas(response.data);
         });
-      
+       
     }, [])
 
 return(
