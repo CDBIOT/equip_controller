@@ -1,43 +1,54 @@
-import logo from './blue/logo.png';
-import './App.css';
-import React, { useState } from 'react';
-import DropDow from './components/DropDow';
-import Form from './components/Form';
 
-import CadEquip from './components/CadEquip';
+import React, {useEffect, useState} from 'react';
+import './App.css';
+import {BrowserRouter as Router, Routes , Route, Link} from 'react-router-dom';
+import Card from './components/Card'
 import Axios from "axios";
+import EquipShow from './components/EquipShow';
+import Navbar from'./components/Navbar';
+
 
 function App() {
-  
+
 const [values, setValues] = useState()
-
-const handleClick = ()=>{
-
-  Axios.post("http://localhost:3001/",{
-    equipamento: values.equipamento,
-    patrimonio: values.patrimonioconst,
-    marca: values.marca,
-    modelo:values.modelo,
-    Nsérie: values.Nsérie,
-    localização:values.localização
-  });
-}
-
+const [listEquips, setListEquips] = useState()
+console.log(listEquips)
 
 
   return (
-    <div className = "App" > 
+   
+<div className = "App" > 
+<Routes />
+<Navbar />
 
-    <h1> Equip-controller</h1>
-    <p> Controle de equipamentos</p>
- 
-    <img src={logo} alt="Logo"/>
-    <label htmlFor="equip">  Equipamento:</label>
-    <DropDow></DropDow>
-    <CadEquip></CadEquip>
-    <Form></Form>
-    </div>
+<p><h1> Equip-controller</h1>Controle de equipamentos</p>
+
+<EquipShow></EquipShow>
+
+<label htmlFor="equip">  Equipamento:</label>
+
+  {typeof listEquips !== "undefined" && 
+  listEquips.map((value)=>{
+  return( 
+    <Card 
+    key={value.id}
+    listEquips={listEquips}
+    setListEquips={setListEquips}
+    patrimonio={value.patrimonio}
+    equipamento={value.equipamento}
+    marca={value.marca}
+    modelo={value.modelo}
+    Nsérie={value.Nsérie}
+    localização={value.localização}
+    >
+    </Card>
+  )
+  })}
+    
+  
+   </div>
+
   );
-}
+  }
 
 export default App;
