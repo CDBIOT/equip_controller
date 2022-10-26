@@ -2,7 +2,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-function CadEquip(){
+function CadEquip(){ 
 
 function CadEquipamento(e){
  e.preventDefault()

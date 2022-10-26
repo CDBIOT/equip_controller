@@ -42,6 +42,8 @@ console.log(listEquips)
     localização={value.localização}
     >
     </Card>
+    
+
   )
   })}
     
