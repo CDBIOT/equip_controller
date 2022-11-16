@@ -11,19 +11,14 @@ function Administracao(){
 return(
 <>
 <section>
+    <p className={styles.p}>ADMINISTRAÇÃO </p>
     <div>{show?
     <div className={styles.box}>
-   
-        <p className={styles.p}>CLIENTES </p>
-        <p className={styles.p}>Cadastro de clientes<span className={styles.span} ><SlCheck color='green' /><SlClose color= 'red' /></span></p>
-        <p className={styles.p}>Fotos de clientes<span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
-        <p className={styles.p}>Histórico de cliente<span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
-        <p className={styles.p}>Recebimentos<span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
-        <p className={styles.p}>Mala direta<span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
-        <p className={styles.p}>Recibo Avulso<span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
-        <p className={styles.p}>Recebimento previsto<span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
-        <p className={styles.p}>Recebimento em carteira<span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
-        <p className={styles.p}>Cadastro de veículos<span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
+        <p className={styles.p}>Controle de e-mail<span className={styles.span} ><SlCheck color='green' /><SlClose color= 'red' /></span></p>
+        <p className={styles.p}>Backup <span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
+        <p className={styles.p}>Sped <span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
+        <p className={styles.p}>Sintegra <span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
+        <p className={styles.p}>Controle de nfs <span className={styles.span}><SlCheck color='green'  /><SlClose color= 'red'/></span></p>
          
         </div>:null
         }

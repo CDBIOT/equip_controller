@@ -4,23 +4,23 @@ import {useEffect, useState} from 'react';
 
 function Card(props){
 
-    const [products, setProducts] = useState()
+    const[sales, setSales] = useState()
 
     useEffect(() => {
         Axios.get("http://localhost:3001/vendas")
         .then((response) =>{
-        setProducts(response.data);
+        setSales(response.data);
         });
         {
-        console.log(products)
+        console.log(sales)
         }
     }, [])
 
 return(
 <div>
-    {products.map((p,index)=> (
+    {sales.map((p,index)=> (
         <h3 key={index}> 
-     {p.product}</h3>
+     {p.sales}</h3>
     )
     )}
 </div>

@@ -7,8 +7,8 @@ const db = mysql.createPool({
 host: "localhost",
 user: "root",
 password: "Prog_2022",
-database: "equipamentos"
-//database: "sbd"
+//database: "equipamentos"
+database: "sbd" 
 })
 
 app.use(cors());

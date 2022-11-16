@@ -2,13 +2,14 @@ import React from 'react';
 import {useEffect, useState} from 'react';
 import Axios from "axios";
 import Product_list from '../Product_list';
-
+import Loader from '../Loader';
 
 const ShowProducts = (props)=> {
 
 const [equips, setEquips] = useState([]);
 const [selectValue, setSelectValue] = useState([])
-        
+const [loading, setLoading] = useState(false);
+
 function handleCreate(e){
     e.preventDefault()
     alert(selectValue)
@@ -21,6 +22,7 @@ useEffect(() => {
     });
     {
     console.log(equips)
+    setLoading(true)
     }
    
 }, [])
@@ -40,12 +42,9 @@ return (  <div>
                 {equips.price} </option>
                 )  
         })}
-         
+         {!loading && <Loader/>}
         </select>
-      
-    <h1>{selectValue}</h1>
-    <h3>{equips.product}{equips.marca}{equips.qtd}{equips.price}</h3>
-  
+       
         </div>
         )
         

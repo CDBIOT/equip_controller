@@ -1,20 +1,18 @@
 
-import React from 'react'
 import { useState } from 'react'
 
-function CadEquip(){ 
+function CadEquip(){
 
 function CadEquipamento(e){
  e.preventDefault()
     console.log(`O equipamento ${equipamento} encontra-se na  ${localização}`)
     console.log("Equipamento Localizado")
 }
-
-const [equipamento, setEquip] = useState()// eslint-disable-next-line
-const [patrimonio, setPat] = useState()// eslint-disable-next-line
-const [marca, setMarca] = useState()// eslint-disable-next-line
-const [modelo, setModel] = useState()// eslint-disable-next-line
-const [Nsérie, setNserie] = useState()// eslint-disable-next-line
+const [equipamento, setEquip] = useState()
+const [patrimonio, setPat] = useState()
+const [marca, setMarca] = useState()
+const [modelo, setModel] = useState()
+const [Nsérie, setNserie] = useState()
 const [localização, setLocal] = useState()
 return(
 <div>

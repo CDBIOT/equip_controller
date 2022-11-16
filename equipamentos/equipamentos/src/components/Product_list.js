@@ -2,15 +2,18 @@ import React from "react"
 import {useEffect, useState} from 'react';
 import Axios from "axios";
 import styles from './Show_Prod.module.css';
+import Loader from './Loader';
 
 function Product_list() {
     
 const [products, setProducts] = useState([]);
+const [loading, setLoading] = useState(false);
         
 useEffect(() => {
     Axios.get("http://localhost:3001/ShowProducts")
     .then((response) =>{
     setProducts(response.data);
+    setLoading(true)
     });
   
 }, [])
@@ -38,7 +41,9 @@ return (
         <td width="25%"className={styles.td}>{products.price}</td></tr>
         ))) : (
          <p1>Não há itens na lista</p1>
-        )} </tbody>
+        )} 
+        {!loading && <Loader/>}
+        </tbody>
         <tfooter>
        
         </tfooter>

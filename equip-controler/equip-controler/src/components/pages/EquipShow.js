@@ -1,38 +1,51 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 import Axios from "axios";
+import Loader from '../Loader';
 
-const EquipShow = ()=> {
+const EquipShow = (props)=> {
 
 const [invent, setInvent] = useState([]);
 const [selectValue, setSelectValue] = useState([])
+const [loading, setLoading] = useState(false);
+
+function handleCreate(e){
+    e.preventDefault()
+    alert(selectValue)
+}
   
 useEffect(() => {
-    Axios.get("http://localhost:3001/")
+    //Axios.get("http://localhost:3001/equiplist")
+    Axios.get("https://equipback.herokuapp.com/equiplist")
     .then((response) =>{
-    setInvent(response.data);
+    setInvent(response.data.inventario);
     });
-}, []) 
+    {  setLoading(true)}
+    
 
+}, []) 
 
 return (   
     <div className='EquipShow'>
-       
-        <select id = "invent" value={selectValue} onChange={e => setSelectValue(e.target.value)}>
-        <option value = "" >Selecione o equipamento...</option>
+      
+      
+        <select id = "inventarios" value={selectValue} onChange={e => setSelectValue(e.target.value)}>
+        <option value = "">Selecione o equipamento...</option>
         {invent.map(invent => {
 
         return (
-                <option value key={invent.id}> {invent.patrimonio}
-                {invent.equipamento}
-                {invent.marca}
-                {invent.modelo}
-                {invent.Nsérie}
-                {invent.localização}</option>
+                <option  value={invent.id}key={invent.id}> 
+                {invent.PATRIMONIO }
+                {invent.EQUIPAMENTO }
+                {invent.MARCA }
+                {invent.MODELO }
+                {invent.SERIAL }
+                {invent.LOCALIZACAO }</option>
                 )  
         })}
+         {!loading && <Loader/>}
         </select>
-        <h3 >{selectValue}</h3>
+        <h1>{selectValue}</h1>
         </div>
         )
         

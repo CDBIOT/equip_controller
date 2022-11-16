@@ -5,6 +5,7 @@ import Axios from "axios";
 import Card from '../Card';
 import ShowProducts from './ShowProducts';
 
+
 function Vendas(props){
 
 const [resultado,setResultado]= useState()
@@ -19,9 +20,7 @@ const [qtd, setQtd] = useState()
 const [price, setPrice] = useState()
 const [total, setTotal] = useState() 
 
-const [products, setProducts] = useState()
-
-
+const[sales, setSales] = useState()
 
 function soma(e){
 
@@ -46,6 +45,7 @@ function CadVendas(e){
         }).then((response)=>
         {
         console.log(response)
+        
         });
     
 }
@@ -58,6 +58,7 @@ return(
         <span><h1>{resultado}</h1></span>
      
         <ShowProducts />
+       
         <div>
      <button onClick={soma} value= {price*qtd}> Add </button>
     </div>
